@@ -135,6 +135,13 @@
 	cursor: pointer;
 	transition: 0.7s;
 }
+/*------my work------*/
+#mywork
+{
+	padding-top: 50px;
+	padding-bottom: 50px;
+	color: #555;
+}
 /*------contact------*/
 #contact
 {
@@ -156,6 +163,14 @@
 {
 	color: #999 !important;
 }
+.btn btn-primary
+{
+	transition-duration: 500ms;
+	transition-property: all;
+}
+.btn:hover {
+	transform: rotate(45deg);
+}
 .follow
 {
 	background: #fff;
@@ -169,20 +184,53 @@
 	font-weight: bold;
 }
 /*footer*/
-#footer
+.footer
 {
-	background: #333;
-	color: #fff;
-	padding: 12px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
-.fa-heart-o
-{
-	margin: 3px;
-	color: red;
+div#circle {
+	width: 200px;
+	height: 200px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 15px solid red;
+	margin: 0 auto;
+	margin-top: 25%;
+	border-radius: 50%;
+	position: relative;
+	animation-name: circle;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	animation-fill-mode: forwards;
 }
-
-
-
+div#square {
+	width: 75px;
+	height: 75px;
+	border: 5px solid limegreen;
+	position: absolute;
+	animation-name: square;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+	animation-direction: alternate-reverse;
+}
+@keyframes circle {
+	0% {border-color: red; transform: scale(1);}
+	25% {border-color: gold; transform: scale(1.1);}
+	50% {border-color: lime; scale(1.3);}
+	75% {border-color: dodgerblue; scale(1.1);}
+	100% {border-color: purple; transform: scale(1);}
+}
+@keyframes square {
+	0% {transform: rotate(0deg);}
+	25% {border-color: aqua; border-width: 10px;}
+	50% {border-color: coral; border-width: 20px;}
+	75% {border-color: yellow; border-width: 40px;}
+	100% {transform: rotate(360deg); border-width: 5px;}
+}
 
 
 
